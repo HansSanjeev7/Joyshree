@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 container mx-auto px-4 py-8">
+    <!-- Hero Banner Section -->
+    <section class="hero-banner mb-8">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">Discover Natural Serenity</h1>
+          <p class="hero-subtitle">Experience the pure essence of nature with our handcrafted aromatic products. From calming incense to soothing candles, every item is crafted with love and care.</p>
+          <div class="hero-buttons">
+            <a href="#shop" class="btn btn-primary">Shop Now</a>
+            <a href="#features" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80" alt="Natural Aromatic Products" class="hero-img">
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Natural</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Products</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="shop">
+      <h2 class="text-center mb-4">Featured Products</h2>
+      <div id="productsGrid" class="products-grid"></div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="features" class="features">
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>Natural Ingredients</h3>
+        <p>All our products are made with 100% natural, organic ingredients sourced from sustainable farms.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✋</div>
+        <h3>Handcrafted</h3>
+        <p>Each product is carefully handcrafted by skilled artisans with generations of expertise.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌱</div>
+        <h3>Ethical Sourcing</h3>
+        <p>We partner with local communities and ensure fair trade practices throughout our supply chain.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shopping Cart Sidebar -->
+  <div id="cartContainer" class="cart-container">
+    <div class="cart-header">
+      <h3>Shopping Cart</h3>
+      <button class="cart-close" onclick="closeCart()">&times;</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-total">
+      <div class="cart-total-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Tax (18%):</span>
+        <span id="cartTax">₹0</span>
+      </div>
+      <div class="cart-total-row cart-total-final">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary w-full mt-4" onclick="showCheckout()" style="display: none;">
+        Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Checkout Section -->
+  <div id="checkoutSection" class="checkout-section hidden">
+    <h2>Checkout</h2>
+    <form id="checkoutForm" class="checkout-form">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" required>
+      </div>
+      <div class="form-group full-width">
+        <label for="address">Address</label>
+        <textarea id="address" rows="3" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" required>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode</label>
+        <input type="text" id="pincode" required>
+      </div>
+    </form>
+    
+    <div class="mt-8">
+      <h3>Order Summary</h3>
+      <div id="orderSummary"></div>
+      <button id="payNowBtn" class="btn btn-primary mt-4" onclick="processPayment()">
+        Pay Now
+      </button>
+      <button class="btn btn-secondary mt-2" onclick="hideCheckout()">
+        Back to Cart
+      </button>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <div id="modalIcon" class="modal-icon"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalMessage"></p>
+      <button class="btn btn-primary mt-4" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white shadow-inner py-4 mt-8">
+    <div class="container mx-auto text-center text-sm text-[#8B7264]">
+      &copy; 2024 JoyShree. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
